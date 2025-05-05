@@ -58,6 +58,10 @@ const config: Config = {
           900: "#7f1d1d",
           950: "#450a0a",
         },
+
+        // 👇 Добавлены пользовательские цвета
+        "victory-red": "#D7263D",
+        "victory-black": "#1E1E1E",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -73,7 +77,10 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("@tailwindcss/typography"), require("tailwindcss-animate")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("tailwindcss-animate")
+  ],
 }
 
 export default config
