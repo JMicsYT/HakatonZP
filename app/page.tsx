@@ -42,9 +42,9 @@ export default function Home() {
       <section className="py-12 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <VictoryDayCountdown />
-        </div>    
+        </div>
       </section>
-{/* About Section */}
+      {/* About Section */}
 
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -58,7 +58,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-       </section>
+      </section>
       {/* Search Section */}
       <section className="py-8">
         <h2 className="text-2xl font-semibold mb-6 text-center">Найти историю</h2>
@@ -74,7 +74,7 @@ export default function Home() {
 
       {/* Featured Stories */}
       <section className="py-8">
-        <h2 className="text-2xl font-semibold mb-6">Избранные истории</h2>
+        <h2 className="text-2xl font-semibold mb-6 text-center">Избранные истории</h2>
         <FeaturedStories />
       </section>
     </div>

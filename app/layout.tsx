@@ -11,7 +11,6 @@ const inter = Inter({ subsets: ["latin", "cyrillic"] })
 export const metadata: Metadata = {
   title: "Помним - Цифровая книга памяти",
   description: "Платформа для сохранения и публикации историй о родственниках – участниках войны",
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({

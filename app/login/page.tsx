@@ -37,17 +37,17 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="container mx-auto px-4 py-12">
-      <div className="max-w-md mx-auto card">
-        <h1 className="text-2xl font-bold mb-6 text-center">Вход в аккаунт</h1>
+    <div className="container mx-auto px-4 py-8 flex justify-center items-center min-h-screen">
+      <div className="max-w-md w-full bg-white rounded-md shadow-md p-4 sm:p-6">
+        <h1 className="text-2xl font-bold mb-4 text-center">Вход в аккаунт</h1>
 
         {error && (
-          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4" role="alert">
+          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-2 rounded mb-2" role="alert">
             <span className="block sm:inline">{error}</span>
           </div>
         )}
 
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-3">
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
               Email
@@ -57,7 +57,7 @@ export default function LoginPage() {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="form-input"
+              className="form-input border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 block w-full sm:text-sm p-2"
               required
             />
           </div>
@@ -71,24 +71,28 @@ export default function LoginPage() {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="form-input"
+              className="form-input border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 block w-full sm:text-sm p-2"
               required
             />
           </div>
 
-          <div className="text-right">
+          <div className="flex items-center justify-end mb-1">
             <Link href="/forgot-password" className="text-sm text-red-700 hover:text-red-800">
               Забыли пароль?
             </Link>
           </div>
 
-          <button type="submit" className="btn-primary w-full" disabled={isLoading}>
-            {isLoading ? "Вход..." : "Войти"}
+          <button
+            type="submit"
+            className="w-full bg-red-600 text-white font-bold py-2 px-4 rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+            disabled={isLoading}
+          >
+            {isLoading ? "Войти..." : "Войти"}
           </button>
         </form>
 
-        <div className="mt-6 text-center">
-          <p className="text-gray-600">
+        <div className="mt-4 text-center">
+          <p className="text-gray-600 text-sm">
             Нет аккаунта?{" "}
             <Link href="/register" className="text-red-700 hover:text-red-800">
               Зарегистрироваться

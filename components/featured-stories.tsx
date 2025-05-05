@@ -53,7 +53,7 @@ export default function FeaturedStories() {
 
   if (error) {
     return (
-      <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4" role="alert">
+      <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4 mx-auto max-w-lg" role="alert">
         <span className="block sm:inline">{error}</span>
       </div>
     )
@@ -61,7 +61,7 @@ export default function FeaturedStories() {
 
   if (stories.length === 0) {
     return (
-      <div className="text-center py-8 bg-gray-50 rounded-lg">
+      <div className="text-center py-8 bg-gray-50 rounded-lg mx-auto max-w-lg">
         <h3 className="text-xl font-medium mb-2">Историй пока нет</h3>
         <p className="text-gray-600 mb-4">
           Будьте первым, кто опубликует историю о своем родственнике – участнике войны.
@@ -74,7 +74,7 @@ export default function FeaturedStories() {
   }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
       {stories.map((story) => (
         <StoryCard
           key={story.id}
